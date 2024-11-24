@@ -1,49 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
     color: white;
     background-color: #1c1c84;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 10px;
-    font-family: "poppins";
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
 }
-main{
-    width: 70%;
+
+main {
+    width: 100%;
+    max-width: 800px;
     background-color: #000035;
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 30px;
     border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
-#pfp{
-    width: 200px;
-    height: 200px;
+
+#pfp {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
-#srchGit{
-    width: 80%;
-    height: 30px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-#srchGit:active{
-    width: 80%;
-    height: 30px;
-    background-color: transparent;
-    border: none;
-    outline: none;
 
+
+
+.top-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
 }
-#srchBtn{
-    width: 18%;
-    height: 100%;
+
+#Git_user {
+    color: blue;
+}
+
+.toCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+#srchGit {
+    width: 80% !important;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#srchBtn {
+    text-align: center;
+    width: 10% !important;
     padding: 5px;
     border-radius: 30px;
     border: none;
@@ -51,35 +74,39 @@ main{
     background-color: #1c1c84;
     color: white;
     font-weight: bold;
+    
 }
-.top-card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 50px;
+#srchBtn svg{
+    width: 20px;
 }
-#Git_user{
-    color: blue;
-}
-.toCont{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-radius: 30px;
-    background-color: white;
-    padding-left: 10px;
-    padding-left: 10px;
 
-}
-.mid-card{
+.mid-card {
     background-color: #323232;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    gap: 10px;
     border-radius: 30px;
+    padding: 10px;
 }
-.low-card{
+
+.low-card {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: space-around;
-    
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    #srchGit, #srchBtn {
+        width: 80%;
+    }
+
+    .top-card {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .low-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
